@@ -1,0 +1,51 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>67cba3a8-2c5a-434e-95b3-2c61dde6152f</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>graphics\ParametersGraph.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>HousePricing</Name>
+    <RootNamespace>HousePricing</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="features_and_cost_vs_iter.py" />
+    <Compile Include="graphics\cost_parameters_iterations.py" />
+    <Compile Include="HousePricing.py" />
+    <Compile Include="PricingScikit.py" />
+    <Compile Include="utils\lab_utils_common.py" />
+    <Compile Include="utils\lab_utils_multi.py" />
+    <Compile Include="utils\lab_utils_uni.py" />
+    <Compile Include="graphics\FirstGraphTest.py" />
+    <Compile Include="graphics\ParametersGraph.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="graphics\" />
+    <Folder Include="data\" />
+    <Folder Include="utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\houses.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
